@@ -1,11 +1,11 @@
-import { AppBar, Box, Button, IconButton, Typography } from '@mui/material'
+import { AppBar, Box, Button, Divider, IconButton, Typography } from '@mui/material'
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import React from 'react'
 
 export default function AppMenu() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='static' sx={{ backgroundColor: "red", height: "100px" }}>
+        <AppBar position='static' sx={{ backgroundColor: "black", height: "100px", borderBottom: "1px solid #878787" }}>
           <Box
             component="div"
             sx={{
@@ -22,18 +22,29 @@ export default function AppMenu() {
                 height: "100%",
                 display: "flex",
                 alignItems: "center",
+                mb: 0,
                 "& .MuiButton-root": {
                   height: "50%",
                   mx: "5px",
+                  borderRadius: "0",
+                  "&:hover": {
+                    color: "white"
+                  }
+                },
+                "& .MuiTypography-root": {
+                  color: "#878787"
                 }
               }}
             >
-              <Button variant="contained">Empleados</Button>
-              <Button variant="contained">Bajas</Button>
-              <Button variant="contained">Agregar</Button>
-              <Button variant="contained">Riesgos</Button>
+              <Button>Empleados</Button>
+              <Typography>|</Typography>
+              <Button>Bajas</Button>
+              <Typography>|</Typography>
+              <Button>Agregar</Button>
+              <Typography>|</Typography>
+              <Button>Riesgos</Button>
               <IconButton>
-                <AccountCircle color='primary' sx={{ fontSize: "45px" }} />
+                <AccountCircle color='primary' sx={{ fontSize: "45px", "&:hover" : {color: "white"}}} />
               </IconButton>
             </Box>
           </Box>
