@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "../pages/login";
+import Login from "../pages/Login";
 import Risks from "../pages/Risks";
+import Departed from "../pages/Departed";
 
 const AppRoutes = () => {
     return (
@@ -9,6 +10,7 @@ const AppRoutes = () => {
             <Route path="/">
                 <Route index path="" element={<Login />}/>
                 <Route path="risks" element={<Risks />}/>
+                <Route path="departed" element={<Departed />}/>
             </Route>
         </Routes>
     );
