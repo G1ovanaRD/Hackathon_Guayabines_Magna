@@ -1,7 +1,11 @@
 import React from 'react'
+import AppMenu from '../AppMenu'
 
-export default function Layout() {
+export default function Layout( { children } ) {
   return (
-    <div>Layout</div>
+    <>
+        <AppMenu />
+        <main style={{ height: '100%'}}>{children}</main>
+    </>
   )
 }
