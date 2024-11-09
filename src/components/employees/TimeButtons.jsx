@@ -11,17 +11,17 @@ export default function TimeButtons() {
                     fontSize: "28px",
                     mt: "10px",
                     borderRadius: "0",
-                    border: "none",
+                    border: "1px solid #878787",
                     color: "white",
                     py: 0,
                     flex: 1,
                     borderTopLeftRadius: "10px",
                     borderTopRightRadius: "10px",
-                    boxShadow: "0 0 2px white",
                     textTransform: "none",
                     "&:hover": {
-                        backgroundColor: "#A0A0A0"
-                    }
+                        backgroundColor: "#202020"
+                    },
+                    transition: "background 0.3s ease",
                 }
             }}
         >
