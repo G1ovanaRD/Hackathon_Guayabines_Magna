@@ -4,6 +4,7 @@ import Login from "../pages/login";
 import Risks from "../pages/Risks";
 import Employees from "../pages/Employees";
 import Departed from "../pages/Departed";
+import  Add from "../pages/Add";
 
 const AppRoutes = () => {
     return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
                 <Route path="risks" element={<Risks />}/>
                 <Route path="employees" element={<Employees />}/>
                 <Route path="departed" element={<Departed />}/>
+                <Route path="add" element={<Add/>}/>
             </Route>
         </Routes>
     );
