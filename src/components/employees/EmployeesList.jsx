@@ -90,12 +90,12 @@ function EnhancedTableHead(props) {
                 sx={{
                     color: 'white',
                     '&:hover': {
-                    color: '#878787',
+                    color: '#888B8D',
                     },
                     '&.Mui-active': {
-                        color: '#878787',
+                        color: '#888B8D',
                         "& .MuiTableSortLabel-icon": {
-                            color: "#878787",
+                            color: "#888B8D",
                         },
                     },
                 }}
@@ -127,7 +127,7 @@ function EnhancedTableToolbar() {
         pl: { sm: 2 },
         pr: { xs: 1, sm: 1 },
         backgroundColor: "black",
-        borderBottom: "1px solid #878787",
+        borderBottom: "1px solid #888B8D",
       }}
     >
       <Typography
@@ -170,7 +170,7 @@ export default function EnhancedTable() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Paper sx={{ width: '100%', mb: 2, border: "1px solid #878787" }}>
+      <Paper sx={{ width: '100%', mb: 2, border: "1px solid #888B8D" }}>
         <EnhancedTableToolbar />
         <TableContainer>
           <Table
@@ -218,6 +218,7 @@ export default function EnhancedTable() {
                             display: "center",
                             alignItems: "center",
                             justifyContent: "end",
+                            mr: "5px",
                         }}
                     >
                         <Box

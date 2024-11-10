@@ -3,24 +3,22 @@ import { createTheme } from "@mui/material";
 export const baseColors = {
     common: {
         black: "#000",
-        white: "#fff",
+        white: "#FFF",
     },
     primary: {
-        main: "#878787",
+        main: "#888D8D",
     },
-    /* primary: {
-        #3A5DAE,
-        #B7BF10,
-        #ED8B00,
-        #000000,
-        #FFFFFF,
-        #DB4231,
-    } */
+    secondary: {
+        main: "#DA291C",
+    }
 }
 
 export const theme = createTheme({
     mode: "light",
     palette: baseColors,
+    typography: {
+        fontFamily: '"Arial", sans-serif'
+    },
     components: {
         MuiButton: {
             styleOverrides: {

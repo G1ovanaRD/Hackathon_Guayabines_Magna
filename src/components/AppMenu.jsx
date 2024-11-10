@@ -23,6 +23,7 @@ export default function AppMenu() {
                 display: "flex",
                 alignItems: "center",
                 mb: 0,
+                mr: "30px",
                 "& .MuiButton-root": {
                   height: "50%",
                   mx: "5px",
