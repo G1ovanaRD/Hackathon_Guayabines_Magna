@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import AddCard from '../components/AddCard'; 
+import SurveyType from '../components/SurveyType';
 
 export default function Add() {
   return (
@@ -15,7 +15,7 @@ export default function Add() {
         background: "black", 
       }}
     >
-      <AddCard />
+      <SurveyType />
     </Box>
   );
 }

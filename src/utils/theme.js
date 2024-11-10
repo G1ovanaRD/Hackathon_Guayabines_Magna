@@ -34,6 +34,13 @@ export const theme = createTheme({
                 },
             },
         },
+        MuiRadio: {
+            styleOverrides: {
+                root: {
+                    color: "white"
+                }
+            }
+        },
         MuiInput: {
             styleOverrides: {
                 root: {
