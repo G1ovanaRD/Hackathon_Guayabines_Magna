@@ -1,7 +1,19 @@
 import React from 'react'
-import Rwindow from '../components/Rwindow'
+import LoginCard from '../components/LoginCard'
+import { Box } from '@mui/material'
+
 export default function Login() {
   return (
-    <div>Login</div>
+    <Box
+        component="div"
+        sx={{
+            display: "flex",
+            alignItems: "center",
+            width: "100vw",
+            height: "100vh",
+        }}
+    >
+        <LoginCard />
+    </Box>
   )
 }
