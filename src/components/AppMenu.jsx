@@ -1,5 +1,6 @@
 import { AppBar, Box, Button, Divider, IconButton, Typography } from '@mui/material'
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import logo from '../assets/Magna-Logo-White-Reverse-MR-V1.0.png';
 import React from 'react'
 
 export default function AppMenu() {
@@ -15,7 +16,7 @@ export default function AppMenu() {
               height: "100%",
             }}
           >
-            <Typography variant="h3">Logo</Typography>
+            <img src={logo} alt="Logo" style={{ height: "50px", marginLeft: "20px" }} />
             <Box
               component="div"
               sx={{

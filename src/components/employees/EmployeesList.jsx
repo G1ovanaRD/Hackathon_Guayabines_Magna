@@ -232,7 +232,7 @@ export default function EnhancedTable() {
                                 mb: 0.4,
                             }}
                         />
-                        <Typography>{row.riesgo}</Typography>
+                        <Typography>{row.riesgo}%</Typography>
                     </Box>
                 </TableCell>
               </TableRow>
