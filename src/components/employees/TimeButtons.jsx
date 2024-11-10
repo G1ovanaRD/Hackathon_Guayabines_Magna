@@ -19,7 +19,7 @@ export default function TimeButtons() {
                     borderTopRightRadius: "10px",
                     textTransform: "none",
                     "&:hover": {
-                        backgroundColor: "#202020"
+                        backgroundColor: "#888D8D"
                     },
                     transition: "background 0.3s ease",
                 }
