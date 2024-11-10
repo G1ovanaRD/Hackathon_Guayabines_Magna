@@ -9,7 +9,7 @@ export default function Footer() {
           padding: '0px', 
           width: '100%', 
           overflow: 'hidden', 
-          position: 'relative', 
+          position: 'relative',
       }}>
         <img 
           src={footerDesign} 

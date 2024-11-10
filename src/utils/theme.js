@@ -10,7 +10,13 @@ export const baseColors = {
     },
     secondary: {
         main: "#DA291C",
-    }
+    },
+    terciary: {
+        main: "#4298B5",
+    },
+    fourth: {
+        main: "#ED8B00",
+    },
 }
 
 export const theme = createTheme({
@@ -28,5 +34,28 @@ export const theme = createTheme({
                 },
             },
         },
-    },
+        MuiInput: {
+            styleOverrides: {
+                root: {
+                    color: "white",
+                    "&:before": {
+                        borderBottomColor: "white",
+                    },
+                    "&:after": {
+                        borderBottomColor: "white",
+                    },
+                },
+            },
+        },
+        MuiInputLabel: {
+            styleOverrides: {
+              root: {
+                color: 'white',
+                '&.Mui-focused': {
+                  color: 'white',
+                },
+              },
+            },
+          },
+        },
 });

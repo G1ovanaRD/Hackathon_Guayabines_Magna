@@ -22,7 +22,7 @@ export default function AppMenu() {
 
   
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
         <AppBar position='static' sx={{ backgroundColor: "black", height: "100px", borderBottom: "1px solid #878787" }}>
           <Box
             component="div"

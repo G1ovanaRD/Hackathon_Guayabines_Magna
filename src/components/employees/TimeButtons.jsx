@@ -9,7 +9,7 @@ export default function TimeButtons() {
                 gap: "5px",
                 "& .MuiToggleButton-root": {
                     fontSize: "28px",
-                    mt: "10px",
+                    mt: "50px",
                     borderRadius: "0",
                     border: "1px solid #878787",
                     color: "white",

@@ -144,7 +144,7 @@ export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage] = React.useState(10);
+  const [rowsPerPage] = React.useState(5);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -165,7 +165,7 @@ export default function EnhancedTable() {
   );
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%', mt: "50px" }}>
       <Paper sx={{ width: '100%', mb: 2, border: "1px solid #888B8D" }}>
         <EnhancedTableToolbar />
         <TableContainer>

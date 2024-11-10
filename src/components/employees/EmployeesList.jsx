@@ -14,6 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import { visuallyHidden } from '@mui/utils';
+import { Fade, InputAdornment, List, ListItem, ListItemIcon, ListItemText, Modal, TextField } from '@mui/material';
+import Brightness1Icon from '@mui/icons-material/Brightness1';
+import SearchIcon from '@mui/icons-material/Search';
 
 function createData(id, nomina, nombre, riesgo) {
   return {
@@ -128,10 +131,10 @@ function EnhancedTableToolbar() {
         pr: { xs: 1, sm: 1 },
         backgroundColor: "black",
         borderBottom: "1px solid #888B8D",
+        justifyContent: "space-between",
       }}
     >
       <Typography
-        sx={{ flex: '1 1 100%' }}
         variant="h5"
         id="tableTitle"
         component="div"
@@ -140,6 +143,19 @@ function EnhancedTableToolbar() {
       >
         Empleados
       </Typography>
+      <TextField
+        label="Buscar"
+        slotProps={{
+            input: {
+                startAdornment: (
+                    <InputAdornment position="start">
+                        <SearchIcon sx={{ color: "common.white" }}/>
+                    </InputAdornment>
+                )
+            }
+        }}
+        variant="standard"
+      />
     </Toolbar>
   );
 }
@@ -148,7 +164,8 @@ export default function EnhancedTable() {
   const [order, setOrder] = React.useState('asc');
   const [orderBy, setOrderBy] = React.useState('calories');
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage] = React.useState(10);
+  const [rowsPerPage] = React.useState(5);
+  const [open, setOpen] = React.useState(false);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -159,6 +176,9 @@ export default function EnhancedTable() {
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
+
+  const handleModalOpen = () => setOpen(true);
+  const handleModalClose = () => setOpen(false);
 
   const visibleRows = React.useMemo(
     () =>
@@ -206,6 +226,7 @@ export default function EnhancedTable() {
                         cursor: 'pointer',
 
                     }}
+                    onClick={handleModalOpen}
                 >
                 <TableCell component="th" scope="row" align="right">
                   {row.nomina}
@@ -256,6 +277,56 @@ export default function EnhancedTable() {
             }
           }}
         />
+        <Modal
+            open={open}
+            onClose={handleModalClose}
+            >
+            <Fade in={open}>
+                <Box
+                    sx={{
+                        position: 'absolute',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        width: 600,
+                        bgcolor: 'background.paper',
+                        border: '2px solid #000',
+                        boxShadow: 24,
+                        p: 2,
+                        borderRadius: "10px",
+                    }}
+                >
+                    <Box
+                        component="div"
+                        sx={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "center",
+                        }}
+                    >
+                        <Typography variant="h4" textAlign="center" sx={{ width: "70%", borderBottom: "1px solid #ED8B00" }}>Alberto Lopez</Typography>
+                    </Box>
+                    <List
+                        sx={{
+                            "& .MuiListItem-root":{
+                                pl: 2,
+                            }
+                        }}
+                    >
+                        <ListItem
+                            sx={{
+                                alignItems: "center",
+                            }}
+                        >
+                            <ListItemIcon>
+                                <Brightness1Icon  sx={{ fontSize: "12px", color: "#ED8B00" }}/>
+                            </ListItemIcon>
+                            <ListItemText primary="Recomendación" />
+                        </ListItem>
+                    </List>
+                </Box>
+            </Fade>
+        </Modal>
       </Paper>
     </Box>
   );
