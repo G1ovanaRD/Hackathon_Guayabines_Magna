@@ -2,8 +2,25 @@ import { AppBar, Box, Button, Divider, IconButton, Typography } from '@mui/mater
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import logo from '../assets/Magna-Logo-White-Reverse-MR-V1.0.png';
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function AppMenu() {
+  const navigate = useNavigate();
+
+  const handleEmployeesClick = () => {
+    navigate('/employees');
+  }
+  const handleRisksClick = () => {
+    navigate('/risks');
+  }
+  const handleDepartedClick = () => {
+    navigate('/departed');
+  }
+  const handleAddClick = () => {
+    navigate('/add');
+  }
+
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
         <AppBar position='static' sx={{ backgroundColor: "black", height: "100px", borderBottom: "1px solid #878787" }}>
@@ -38,13 +55,13 @@ export default function AppMenu() {
                 }
               }}
             >
-              <Button>Empleados</Button>
+              <Button onClick={handleEmployeesClick}>Empleados</Button>
               <Typography>|</Typography>
-              <Button>Bajas</Button>
+              <Button onClick={handleDepartedClick}>Bajas</Button>
               <Typography>|</Typography>
-              <Button>Agregar</Button>
+              <Button onClick={handleAddClick}>Agregar</Button>
               <Typography>|</Typography>
-              <Button>Riesgos</Button>
+              <Button onClick={handleRisksClick}>Riesgos</Button>
               <IconButton>
                 <AccountCircle color='primary' sx={{ fontSize: "45px", "&:hover" : {color: "white"}}} />
               </IconButton>
